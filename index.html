@@ -1,115 +1,150 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Tech Company</title>
-    <style>
-        /* CSS styles */
-        body {
-            background-color: #f2f2f2;
-        }
-        
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-        }
-        
-        h1 {
-            margin: 0;
-        }
-        
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            margin-right: 10px;
-        }
-        
-        main {
-            padding: 20px;
-        }
-        
-        footer {
-            background-color: #333;
-            color: #fff;
-            padding: 10px;
-            text-align: center;
-        }
-        
-        form {
-            margin-top: 20px;
-        }
-        
-        label {
-            display: block;
-            margin-bottom: 5px;
-            font-weight: bold;
-        }
-        
-        input[type="text"],
-        input[type="email"],
-        textarea {
-            width: 100%;
-            padding: 5px;
-            margin-bottom: 10px;
-            border-radius: 5px;
-            border: 1px solid #ccc;
-        }
-        
-        input[type="submit"] {
-            background-color: #333;
-            color: #fff;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Outdoorsmen Store</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js"></script>
 </head>
 <body>
-    <header>
-        <h1>Tech Company</h1>
-        <nav>
-            <a href="#">Home</a>
-            <a href="#">Product</a>
-            <a href="#">Contact</a>
-        </nav>
-    </header>
-    
-    <main>
-        <h2>Product 1</h2>
-        <img src="product1.jpg" alt="Product 1">
-        <p>Description of Product 1</p>
-        
-        <h2>Product 2</h2>
-        <img src="product2.jpg" alt="Product 2">
-        <p>Description of Product 2</p>
-        
-        <h2>Product 3</h2>
-        <img src="product3.jpg" alt="Product 3">
-        <p>Description of Product 3</p>
-        
-        <form>
-            <h2>Contact Us</h2>
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name">
-            
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email">
-            
-            <label for="message">Message:</label>
-            <textarea id="message" name="message"></textarea>
-            
-            <input type="submit" value="Submit">
-        </form>
-    </main>
-    
-    <footer>
-        &copy; 2024 Tech Company. All rights reserved.
-    </footer>
-    
-    <script>
-        // JavaScript code (if needed)
-    </script>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section id="home">
+      <h1>Welcome to the Outdoorsmen Store</h1>
+      <p>Explore nature with the right gear!</p>
+    </section>
+<section id="products">
+  <h2>Products</h2>
+  <div class="product">
+    <img src="product1.jpg" alt="Product 1">
+    <h3>Product 1</h3>
+    <p>Description of Product 1</p>
+    <form action="submit.php" method="POST">
+      <label for="quantity">Quantity:</label>
+      <input type="number" id="quantity" name="quantity" min="1" max="10">
+      <input type="submit" value="Add to Cart">
+    </form>
+  </div>
+
+  <div class="product">
+    <img src="product2.jpg" alt="Product 2">
+    <h3>Product 2</h3>
+    <p>Description of Product 2</p>
+    <form action="submit.php" method="POST">
+      <label for="quantity">Quantity:</label>
+      <input type="number" id="quantity" name="quantity" min="1" max="10">
+      <input type="submit" value="Add to Cart">
+    </form>
+  </div>
+
+  <div class="product">
+    <img src="product3.jpg" alt="Product 3">
+    <h3>Product 3</h3>
+    <p>Description of Product 3</p>
+    <form action="submit.php" method="POST">
+      <label for="quantity">Quantity:</label>
+      <input type="number" id="quantity" name="quantity" min="1" max="10">
+      <input type="submit" value="Add to Cart">
+    </form>
+  </div>
+</section>
+
+<section id="about">
+  <h2>About Us</h2>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultricies, elit vitae iaculis facilisis, metus
+    mauris cursus ex, eget dictum purus ex et lorem. Curabitur malesuada erat ut quam luctus, sed consequat leo
+    rutrum. Pellentesque et eros nec lorem egestas vulputate.</p>
+</section>
+
+  </main>
+  <footer>
+    <p>&copy; 2024 Outdoorsmen Store. All rights reserved.</p>
+  </footer>
 </body>
 </html>
+/* styles.css */
+
+
+body {
+font-family: Arial, sans-serif;
+background-color: #d3e5d8;
+color: #333;
+line-height: 1.5;
+margin: 0;
+padding: 0;
+}
+
+
+header {
+background-color: #558c6c;
+padding: 20px;
+}
+
+
+nav ul {
+list-style-type: none;
+margin: 0;
+padding: 0;
+}
+
+
+nav ul li {
+display: inline-block;
+margin-right: 10px;
+}
+
+
+nav ul li a {
+color: #fff;
+text-decoration: none;
+}
+
+
+main {
+padding: 20px;
+}
+
+
+section {
+margin-bottom: 40px;
+}
+
+
+h1, h2, h3 {
+color: #558c6c;
+}
+
+
+.product {
+text-align: center;
+margin-bottom: 20px;
+}
+
+
+img {
+width: 200px;
+height: 200px;
+object-fit: cover;
+border-radius: 50%;
+}
+
+
+footer {
+background-color: #558c6c;
+padding: 20px;
+color: #fff;
+text-align: center;
+}
+
+
+/* script.js */
+
